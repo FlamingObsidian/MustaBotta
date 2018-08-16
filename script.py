@@ -9,6 +9,13 @@ hates = ["maths","Elon Musk","American spelling","expanded universes","Disney","
 "the phrase \"swiggity swooty\"","Russian heraldry","light","Cdreus","logos","Canada","75% of the new Star Wars characters","the US embassy in Helsinki","talented people","legs","British noble heraldry","the word Czechia","the Bézier Game","the animated logo of the Ministry of Foreign Affairs of Finland","loss","Iberian shields with diagonal sides","the word tabloid","the website of the Swedish royal family","the list of Russian leaders Lyylikki would bang","Artifexian, but can’t tell why","the Reddit comment section","the coat of arms of Kanepi, Estonia","the flaps the priests have around their necks","swimming pools",
 "the official emblazon of the coat of arms of Norway","when my bookstore gives out -15% codes","claw monsters","Sodacan","when people claim sable could be a fur in certain jurisdictions","vexilloids","copper","purpure","the number of NYC polling stations","excitement","The pronunciation of “Guyana”","The Portuguese flag","non-Trinitarian Christians","A.C","proper","the College of Arms","the Lord Lyon of Arms","“family crests”","orange","trees","everything and everyone"]
 
+@bot.event
+async def on_ready():
+    print('Logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
+
 @bot.command(pass_context=True)
 async def hate(ctx)
     channel = ctx.message.channel
@@ -38,3 +45,5 @@ async def nofun(ctx)
 async def nazis(ctx)
     channel = ctx.message.channel
     await bot.send_file(channel, "nazis.png")
+
+bot.run('token here')
